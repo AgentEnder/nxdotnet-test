@@ -1,8 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  
   <PropertyGroup>
+    
     <TargetFramework>net5.0</TargetFramework>
+    
     <RootNamespace>class_dto</RootNamespace>
+    
   </PropertyGroup>
-
+  
+  <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
+    
+    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p class-dto"/>
+    
+  </Target>
 </Project>

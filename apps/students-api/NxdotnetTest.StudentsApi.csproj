@@ -4,6 +4,7 @@
     
     <TargetFramework>net5.0</TargetFramework>
     
+    <OutputPath>../../dist/apps/students-api</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>
@@ -14,7 +15,7 @@
   
   <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
     
-    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p class-api"/>
+    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p students-api"/>
     
   </Target>
 </Project>
